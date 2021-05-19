@@ -1,0 +1,15 @@
+{
+  "name": "@fireflysemantics/assets",
+  "version": "1.0.21",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "http://localhost:4873"
+  },
+  "peerDependencies": {
+    "@angular/material": "*",
+    "@angular/common": "*",
+    "@angular/core": "*",
+    "tslib": "*"
+  },
+  "dependencies": {}
+}

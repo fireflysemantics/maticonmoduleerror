@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "fs-assets": {
+      "projectType": "library",
+      "root": "projects/fs-assets",
+      "sourceRoot": "projects/fs-assets/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/fs-assets/tsconfig.lib.json",
+            "project": "projects/fs-assets/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/fs-assets/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fs-assets/src/test.ts",
+            "tsConfig": "projects/fs-assets/tsconfig.spec.json",
+            "karmaConfig": "projects/fs-assets/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fs-assets/tsconfig.lib.json",
+              "projects/fs-assets/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "fs-assets"
 }

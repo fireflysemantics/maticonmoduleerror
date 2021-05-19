@@ -6,15 +6,25 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "ig": "npm install -g @jsdevtools/version-bump-prompt && npm install -g npm-check-updates && npm install -g npm-install-peers",
+    "i": "",
+    "u": "cd projects/fs-assets && ncu -u && npm i && npm-install-peers",
+    "bp": "cd projects/fs-assets && bump patch",
+    "t": "cd projects/fs-assets && npx jest",
+    "b": "ng build fs-assets",
+    "p": "npm run u && npm run bp && npm run b && cd dist/fs-assets/ && npm publish",
+    "d": "typedoc --out doc --exclude **/*.spec.ts ./projects/fs-assets/src/lib"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.5",
+    "@angular/cdk": "^11.2.12",
     "@angular/common": "~11.2.5",
     "@angular/compiler": "~11.2.5",
     "@angular/core": "~11.2.5",
     "@angular/forms": "~11.2.5",
+    "@angular/material": "^11.2.12",
     "@angular/platform-browser": "~11.2.5",
     "@angular/platform-browser-dynamic": "~11.2.5",
     "@angular/router": "~11.2.5",
@@ -23,6 +33,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1102.13",
     "@angular/cli": "~11.2.4",
     "@angular/compiler-cli": "~11.2.5",
     "@types/jasmine": "~3.6.0",
@@ -35,6 +46,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

@@ -6,6 +6,12 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "paths": {
+      "fs-assets": [
+        "dist/fs-assets/fs-assets",
+        "dist/fs-assets"
+      ]
+    },
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
